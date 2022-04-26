@@ -2,6 +2,8 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
+// timestamps option tells Mongoose to automatically manage createdAt and updatedAt properties on documents.
+
 const memberSchema = new Schema({
     userName: {
         type: String,
