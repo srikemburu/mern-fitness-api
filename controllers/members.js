@@ -1,8 +1,6 @@
 const router = require('express').Router()
 let Member = require('../models/member.model.js')
 
-
-
 router.post('/add', (req,res) => {
     Member.create(req.body, (err, createdMember) => {
         res.json(createdMember)
@@ -10,7 +8,7 @@ router.post('/add', (req,res) => {
 })
 
 router.get('/', (req, res) => {
-    console.log("backend GET members")
+  //  console.log("backend GET members")
     Member.find({}, (err, foundMember) => {
         res.json(foundMember)
     })

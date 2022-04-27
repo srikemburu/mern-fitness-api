@@ -7,13 +7,19 @@ router.get('/', (req, res) => {
         .catch (err => res.status(400).json('Error: ' + err))
 })
 
-
-
 router.delete('/:id', (req,res) => {
     console.log("backend DELETE")
     Exercise.findByIdAndRemove(req.params.id, (err, deletedExercise) => {
         res.json(deletedExercise)
     })
+})
+
+router.put('/edit/:id', (req,res) => {
+    console.log("backend PUT")
+    console.log("req body: ", req.body)
+    Exercise.findByIdAndUpdate(req.params.id, req.body, {new:true}, 
+        (err, editedExercise) => res.json(editedExercise)
+        )
 })
 
 router.post('/add', (req,res) => {
@@ -24,16 +30,13 @@ router.post('/add', (req,res) => {
 
 
 
-router.put('/:id', (req,res) => {
-    Exercise.findByIdAndUpdate(req.params.id, req.body, {new:true}, 
-        (err, editedExercise) => res.json(editedRecord)
-        )
-})
 
 router.get('/:id', (req,res) => {
     Exercise.findById(req.params.id, (err, foundExercise) => {
         res.json(foundExercise)
     })    
 })
+
+
 
 module.exports = router
