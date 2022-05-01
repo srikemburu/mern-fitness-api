@@ -8,7 +8,6 @@ router.post('/add', (req,res) => {
 })
 
 router.get('/', (req, res) => {
-  //  console.log("backend GET members")
     Member.find({}, (err, foundMember) => {
         res.json(foundMember)
     })
