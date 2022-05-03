@@ -62,9 +62,8 @@ It has the following functionality:
 - Fork and clone this repository to you machine
 - Change into the new directory
 - Run **npm install** in a terminal
-- Run **Mongod** after npm install finished
-- Run Nodemon after Mongod is finished to start the webserver
-- Lastly, open a browser window, and navigate to **http:localhost:3000** to start the application
+- Run Nodemon after MongoDB is finished to start the webserver
+- Lastly, open a browser window, and navigate to **http:localhost:3001** to start the application
 
 ### Future plans for Fitness Tracker
 
@@ -72,8 +71,11 @@ It has the following functionality:
 
 I would like to add functionality to pull up exercises for each person
 
-### heroku link:
+### heroku link for front end: https://skfitnessclient.herokuapp.com/
+### heroku link for back end: https://skfitnessapi.herokuapp.com/exercises
+### heroku link for back end: https://skfitnessapi.herokuapp.com/members
 
-### github link:
+### github link for Backend: https://github.com/srikemburu/mern-fitness-api
 
-### github pages :
+### github link for Frontend: https://github.com/srikemburu/mern-fitness-client
+
